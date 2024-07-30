@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: 2c9f875913ee60ca25ce70243dc24d5b6415598c # v4.6.0
+    rev: v4.6.0 # v4.6.0
     hooks:
       - id: detect-private-key
       - id: detect-aws-credentials
@@ -16,12 +16,12 @@ repos:
       - id: mixed-line-ending
         args: ['--fix=lf']
   - repo: https://github.com/gruntwork-io/pre-commit
-    rev: d0bcdb35c6999a4a120b528f050d2b11778fd3d0 # v0.1.23
+    rev: v0.1.23 # v0.1.23
     hooks:
       - name: Check shell scripts
         id: shellcheck
   - repo: https://github.com/tateexon/pre-commit-hooks
-    rev: main
+    rev: c99f06d4daa3e77a72e0ed94c625b6e37db3bc6a
     hooks:
       - id: go-lint
       - id: go-mod-tidy
