@@ -12,3 +12,9 @@
   language: script
   stages: [pre-push, manual]
   pass_filenames: false
+- id: detect-typos
+  name: Check for typos
+  description: Check the code for any typos
+  entry: ./.githooks/typos.sh
+  language: script
+  stages: [pre-commit, pre-push, manual]
