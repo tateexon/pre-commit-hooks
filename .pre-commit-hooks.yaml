@@ -3,6 +3,7 @@
   description: ensures golang code meets the configured lint criteria.
   entry: ./pre-commit-hooks/go-lint
   language: script
+  pass_filenames: false
   stages: [pre-commit, pre-push, manual]
 - id: go-mod-tidy
   name: go mod tidy
@@ -10,3 +11,4 @@
   entry: ./pre-commit-hooks/go-mod-tidy
   language: script
   stages: [pre-commit, pre-push, manual]
+  files: 'go\.mod$'
