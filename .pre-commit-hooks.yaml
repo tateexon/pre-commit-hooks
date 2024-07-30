@@ -1,14 +1,14 @@
 - id: go-lint
   name: lint golang files
   description: ensures golang code meets the configured lint criteria.
-  entry: ./pre-commit-hooks/go-lint2
+  entry: pre-commit-hooks/go-lint2
   language: script
   pass_filenames: false
   stages: [pre-commit, pre-push, manual]
 - id: go-mod-tidy
   name: go mod tidy
   description: ensure go mod is tidied before push
-  entry: ./pre-commit-hooks/go-mod-tidy
+  entry: pre-commit-hooks/go-mod-tidy
   language: script
   stages: [pre-push, manual]
   pass_filenames: false
