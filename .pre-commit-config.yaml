@@ -15,3 +15,8 @@ repos:
       - id: trailing-whitespace
       - id: mixed-line-ending
         args: ['--fix=lf']
+  - repo: https://github.com/tateexon/pre-commit-hooks
+    rev: 39aa7d80c70ac5027f35ac90f2226ba393f775ea # v0.0.1
+    hooks:
+      - id: go-lint
+      - id: go-mod-tidy
