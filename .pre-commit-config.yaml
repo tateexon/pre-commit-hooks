@@ -16,7 +16,7 @@ repos:
       - id: mixed-line-ending
         args: ['--fix=lf']
   - repo: https://github.com/tateexon/pre-commit-hooks
-    rev: 9cd29c6e112cb995a3b8b86f36e982ddb7d10707 # v0.0.1
+    rev: 114965737e23659589ddd6834722b3044a9f97d2 # v0.0.1
     hooks:
       - id: go-lint
       - id: go-mod-tidy
