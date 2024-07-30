@@ -10,5 +10,5 @@
   description: ensure go mod is tidied before push
   entry: ./pre-commit-hooks/go-mod-tidy
   language: script
-  stages: [pre-commit, pre-push, manual]
-  files: 'go\.mod$'
+  stages: [pre-push, manual]
+  pass_filenames: false
