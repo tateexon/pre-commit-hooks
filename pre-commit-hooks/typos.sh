@@ -1,12 +1,16 @@
 #!/usr/bin/env bash
 
+# Exit immediately if a command exits with a non-zero status
+set -e
+
 # Function to check for typos
 check_typos() {
     local config_option=""
     if [[ -f "./_typos.toml" ]]; then
         config_option="--config ./_typos.toml"
     fi
-    typos "$config_option" --force-exclude "$@"
+    # shellcheck disable=SC2086
+    typos $config_option --force-exclude "$@"
 }
 
 # Run the typos check
