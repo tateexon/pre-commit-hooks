@@ -1,0 +1,4 @@
+pre-commit 3.7.1
+typos 1.23.3
+shfmt 3.8.0
+shellcheck 0.10.0
