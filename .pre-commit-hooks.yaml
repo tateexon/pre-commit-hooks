@@ -1,3 +1,4 @@
+# golang
 - id: go-lint
   name: lint golang files
   description: ensures golang code meets the configured lint criteria.
@@ -12,6 +13,22 @@
   language: script
   stages: [pre-push, manual]
   pass_filenames: false
+# rust
+- id: rust-lint
+  name: lint rust files
+  description: ensures rust code meets the configured lint criteria.
+  entry: pre-commit-hooks/rust-lint.sh
+  language: script
+  pass_filenames: false
+  stages: [pre-commit, pre-push, manual]
+- id: rust-fmt
+  name: format rust files
+  description: ensures rust code is formatted as the project expects.
+  entry: pre-commit-hooks/rust-fmt.sh
+  language: script
+  pass_filenames: false
+  stages: [pre-commit, pre-push, manual]
+# typos
 - id: detect-typos
   name: Check for typos
   description: Check the code for any typos
