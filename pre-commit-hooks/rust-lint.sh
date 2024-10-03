@@ -3,12 +3,16 @@
 # Exit immediately if a command exits with a non-zero status.
 set -e
 
+# Get the directory to run cargo fmt in, default to current directory
+RUST_DIR=${1:-.}
+
 # Function to run linters on the rust project
 run_linter() {
     echo "Executing clippy"
 
     # Run the linter and capture the exit status
     set +e
+    cd "$RUST_DIR"
     cargo clippy -- -D warnings
     local linting_result=$?
     set -e
